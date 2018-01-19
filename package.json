@@ -1,0 +1,19 @@
+{
+  "name": "nickfreemandesign",
+  "version": "1.0.0",
+  "description": "Design and Software services and portfolio for Nick Freeman Design, LLC. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickfreemandesign/nickfreemandesign.git"
+  },
+  "author": "Nick Freeman",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nickfreemandesign/nickfreemandesign/issues"
+  },
+  "homepage": "https://github.com/nickfreemandesign/nickfreemandesign#readme"
+}
