@@ -3,11 +3,11 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractSass = new ExtractTextPlugin({
-  filename: 'styles.css'
+  filename: 'main.css'
 });
 
 module.exports = {
-  entry: ['babel-polyfill', './src/index.js'],
+  entry: ['babel-polyfill', './src/index.js', './src/scss/main.scss'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -23,7 +23,25 @@ module.exports = {
         plugins: ['transform-decorators-legacy']
       }
     }, {
-      test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+      test: /\.svg$/,
+      use: [
+        {
+          loader: "babel-loader"
+        },
+        {
+          loader: "react-svg-loader",
+          options: {
+            // svgo: {
+            //   plugins: [
+            //     { removeTitle: false }
+            //   ],
+            //   floatPrecision: 2
+            // }
+          }
+        }
+      ]
+    }, {
+      test: /\.(png|jpg|gif|eot|ttf|woff|woff2)$/,
       use: {
         loader: 'url-loader',
         options: {

@@ -10,7 +10,7 @@ import App from './App';
 ReactDOM.render(
   <Router>
     <Switch>
-    <App />
+      <App />
     </Switch>
   </Router>
 , document.getElementById('app'));
